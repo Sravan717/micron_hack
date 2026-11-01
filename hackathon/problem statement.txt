@@ -1,0 +1,22 @@
+PROBLEM: "AI-Aware Cache & Prefetch Engine RTL Challenge"
+- AI workloads (LLMs, CNNs, recommenders) are fast at math but wait on memory.
+- Build hardware that fetches data BEFORE it is needed.
+- Pipeline: AI workload -> Cache (I build) -> Prefetch Engine (I build) -> DRAM
+  (big, slow main memory).
+- Prefetcher: 1) Watch the addresses the program reads, 2) Guess the next
+  address, 3) Fetch it early into the cache.
+- Goal: fewer slow DRAM trips, more cache hits, faster AI.
+
+LEVELS (each builds on the previous; go as far as possible)
+1. Memory trace analysis (access behavior, common patterns)
+2. Cache architecture design (organization, replacement policy)
+3. Prefetch strategy design (sequential, stride, or own idea)
+4. RTL in Verilog/SystemVerilog (cache controller, prefetch engine, testbench)
+5. Performance validation (hit rate up, latency down, prefetch accuracy)
+Teams stand out with: adaptive cache policies, intelligent prefetching,
+AI-aware optimization, novel prediction algorithms.
+
+RULES
+- No starter code, traces or RTL are provided; build everything from scratch.
+- Required tools: Python 3, Icarus Verilog, GTKWave, Git.
+  Optional: Verilator, Cocotb, Pandas, Matplotlib.
